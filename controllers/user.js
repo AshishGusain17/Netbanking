@@ -35,23 +35,8 @@ const userIdForEachLink=(req,res,next)=>{
      
 };  
 
- 
-// const addUser=(req,res,next)=>{
-//     console.log(32,'adding_user',87);
-//     obj={
-//         email:'ashishgusain2017@iiitkottayam.ac.in',
-//         password:11,
-//         accountNumber:12345,
-//         amount:1000,
-//         details:[]
-//     };
-//     obj1=new user(obj);
-//     obj1.save()
-//         .then(a=>{
-//             res.redirect('/');
-//         })
-//         .catch(err=>{console.log(23,err,89);});
-// }
+
+
 
 
 

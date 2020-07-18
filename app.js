@@ -46,7 +46,8 @@ const fileFilter=(req,file,cb)=>{
 app.use(multer({storage:fileStorage,fileFilter:fileFilter}).single('image')); 
 
 const store = new MongoDBStore({
-    uri: 'mongodb+srv://gusain8357:password8357@cluster0-iu4oz.mongodb.net/Netbanking_database?retryWrites=true&w=majority',
+    uri: 'mongodb+srv://username:password@cluster0-werpd.mongodb.net/Netbanking_database?retryWrites=true&w=majority',
+
     collection: 'mySessions'
   });
   
@@ -64,10 +65,10 @@ app.use(admin.handler);
 app.use(shop);
 
 app.use((req,res,next)=>{
-    res.render('error',{tit:'error-no-url',isAuthenticated:false});
+    res.render('error',{tit:'error-no-url',isAuthenticated:false}); 
 })
 
-mongoose.connect('mongodb+srv://gusain8357:password8357@cluster0-iu4oz.mongodb.net/Netbanking_database?retryWrites=true&w=majority',{ useNewUrlParser: true,useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://username:password@cluster0-werpd.mongodb.net/Netbanking_database?retryWrites=true&w=majority',{ useNewUrlParser: true,useUnifiedTopology: true })
         .then(ob=>{
             app.listen(process.env.PORT || 4000);
             console.log('connected_via_mongooseJS',51);
@@ -76,4 +77,5 @@ mongoose.connect('mongodb+srv://gusain8357:password8357@cluster0-iu4oz.mongodb.n
 
 
 
-        //@Ashish82350786
+
+        
